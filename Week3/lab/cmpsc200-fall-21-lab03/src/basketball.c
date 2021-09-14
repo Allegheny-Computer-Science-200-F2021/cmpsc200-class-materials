@@ -7,6 +7,18 @@ void report(char *names[], float rankings[], int size){
 }
 void teamA(char *names[], float rankings[], int size){
 	/* add your logic here */
+	char *aNames[size/2];
+	float aRankings[size/2];
+	char *finalNames[size/4];
+	float finalRankings[size/4];
+	for (int i = 0 ; i < size; i++){
+		if (i % 2 == 0)
+			aNames[i/2] = names[i];
+			aRankings[i/2] = rankings[i];
+	}
+	// Find the top 5 items in the aNames and aRanking array ...
+	// report(aNames, aRankings, size/2);
+
 }
 void teamB(char *names[], float rankings[], int size){
 	/* add your logic here */
@@ -14,7 +26,7 @@ void teamB(char *names[], float rankings[], int size){
 int main(){
 	/* Please don't edit the main method. All these code is required to complete this lab. */
 	char *names[] = {"Peter", "Maximus", "Curtis", "Raphael", "Cale", "Omari", "Brayan", "Kaeden", "Wyatt", "Dwayne", "Alex", "Deon", "Teagan", "Emilin", "Triston", "Alonzo", "Ulises", "Regin", "Tommy", "Cannon"};
-	float rankings[] = {4.2,5,3.2,5,5,1.5,2.6,2.8,1.9,4.3,4.8,3.2,3.3,4.5,3.1,4.7,4.4,2.9,4.9,2/7};
+	float rankings[] = {4.2,5,3.2,5,5,1.5,2.6,2.8,1.9,4.3,4.8,3.2,3.3,4.5,3.1,4.7,4.4,2.9,4.9,2.7};
 	int size = (int) (sizeof(rankings)/sizeof(rankings[0]));
 	printf("There are %d players in the pool. \n", size);
 	char prompt = 'x';
