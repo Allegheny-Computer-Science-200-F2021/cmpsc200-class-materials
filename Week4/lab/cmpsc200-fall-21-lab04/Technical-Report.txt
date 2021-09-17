@@ -1,0 +1,7 @@
+Add your technical answers in the space provided below:
+-----
+
+1) Why do we have a if/else logic between line number 12 and 16 in fbi.c? Why can't we just do one printf? 
+2) Why do we use unsigned long rather use an int in fbi.c? Do some experiments yourself
+3) Why do we have a logic to add a number 64 in line number 29 in eye.c? What is the purpose? Answer after thinking through and doing some code logic testing. 
+-----
