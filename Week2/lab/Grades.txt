@@ -1,0 +1,16 @@
+				Graded Report File
+			    ===================
+Student Name: Thomas Antle
+----------------------------------------------------
+Task 1) 5/10 points
+Correctly edited the stars table!
+Task 2) 10/10 points
+Correctly edited the Stars C program. Full points given!
+Task 4) To Lower 10/10 points
+Correctly edited the Casing To Lower C program. Full points given!
+Task 5) Camel Casing - 10/10 points. 
+Correctly edited the Casing To Upper C program. Full points given!
+Task 7) Binary Table - 15/15 points. 
+Correctly edited the Casing Binary Table C program. Full points given!
+----------------------------------------------------
+Total 50/50
