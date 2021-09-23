@@ -1,0 +1,20 @@
+Product In-class Exercise - Add your answers below. 
+------------------------------------------------
+1) What is the write method doing? 
+2) In the load method, why we have three variables called f1, f2, and f3? Uncomment line 37 to produce output from the program. 
+3) What is happening in lines 38,39,40?
+4) What is happening in line 41?
+5) What is the role of the variable multiplier?
+6) What is the conditional logic in lines between 47 and 74?
+7) Why is there an if condition in lines 72 and 73?
+8) What is happening in lines 86 and 87?
+------------------------------------------------
+
+------------------------------------------------
+Tasks to Implement:
+-----------------------------------------------
+1) Add new logic to print the contents of the struct prod in report method!
+2) Next print the item that is maximum sold!
+3) Next print the item that is maximum ranked!
+-----------------------------------------------
+
