@@ -1,0 +1,12 @@
+				Graded Report File
+			    ===================
+Student Name: Thomas Antle
+----------------------------------------------------
+Task 1) Basket ball player game 20/20 points
+Correctly edited the basket ball program and the correct result was produced!
+Task 2) Strings program 10/10 points:
+Correctly edited the Strings C program and the correct result was produced! Full points given.
+Task 3) File Explorer program:
+Correctly edited the Strings C program and the correct result was produced! Full points given.
+----------------------------------------------------
+Total 50/50
