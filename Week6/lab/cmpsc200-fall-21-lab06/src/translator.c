@@ -16,6 +16,20 @@ int b2d(){
 	/* calculate the number of bits using a temp variable */
 	/* note why we use temp variable, if we make changes to binary variable. then we will lose it. */
 	/* we need the binary variable for actual translation */
+	unsigned long temp = binary;
+	while(temp > 0){
+		temp /= 10;
+		bits++;
+	}
+	temp = binary;
+	while (bits){
+		if (bits > 1)
+			res = (res + temp/pow(10, bits-1)) * 2;
+		else
+			res = (res + temp/pow(10, bits-1));
+		temp = temp % (unsigned long) pow(10, bits-1);
+		bits--;	
+	}
 	return res;
 }
 unsigned long d2b(){
@@ -26,6 +40,14 @@ unsigned long d2b(){
 	printf("Enter a decimal:");
 	scanf("%d", &decimal);
 	/* add your logic here .... */
+	unsigned long rem = 1;
+	unsigned long temp = decimal;
+	while(temp > 0){
+		bit = temp % 2;
+		temp = temp / 2;
+		res += bit * rem;
+		rem = rem * 10;
+	}
 	return res;
 }
 int main(){

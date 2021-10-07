@@ -24,9 +24,8 @@ void load(char *file, struct student* *student){
   int c = 0;
   FILE *fp = fopen(file, "rb"); // rb is for read mode for file reading
   int studentID = 0;
-  char *studentName;
+  char *studentName = malloc(20*sizeof(char));
   int nameIndex = 0, studentIndex = 0;
-
   while ((c=fgetc(fp)) != EOF) { // fgetc is for getting characters from file directly than std stream. 
         // develop your logic here to build each phone number && add it to the array.
       // refer to how we read integers && build integers from characters in ascii.c in week2/code folder. 
@@ -35,15 +34,20 @@ void load(char *file, struct student* *student){
       studentID = 10*studentID + digit;
     } 
     else if (c != ' ' && ((c >= 'a' || c >= 'A') && (c <= 'z' || c <= 'z'))){
+        printf("%c\n", c);
         student[studentIndex]->studentID = studentID;
         studentID = 0;
+        //studentName = realloc(studentName, nameIndex+1);
         *(studentName + nameIndex) = c;
+        printf("%c\n", c);
         nameIndex++;
     }
     else {
-      *(studentName + nameIndex) = '\0';  
+      
+      *(studentName + nameIndex) = 0;  
+      nameIndex = 0;
       student[studentIndex]->studentName = studentName;
-      studentName = "";
+      
       studentIndex++;    
     }
 

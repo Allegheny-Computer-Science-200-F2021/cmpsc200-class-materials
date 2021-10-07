@@ -138,7 +138,7 @@ void report(struct song* songs){
 }
 
 int main(){
-	char *file = "data.txt";
+	char *file = "patient-data.txt";
 	struct song* songs;
   	songs = (struct song*)
         malloc(SIZE*sizeof(struct song));
