@@ -2,8 +2,9 @@
 
 prompt1:    .asciiz      "Enter the first number: "
 prompt2:    .asciiz      "Enter the second number: "
+newline:    .asciiz      "\n"
 
-result:     .asciiz      "Final result is: "
+result:     .asciiz      "Final result is: \n"
 
 .text
 .globl main
@@ -25,11 +26,12 @@ result:     .asciiz      "Final result is: "
 
 
   # read the second number
-  li $v0, 5
+  li $v0, 5 # scanf("%d")
   syscall
   move $t1, $v0
 
   add $t2, $t0, $t1    # add $t0 and $t1 and to $t7
+  sub $t3, $t0, $t1  # t3 = t0 - t1
 
    # print the result message
    li $v0, 4
@@ -39,6 +41,16 @@ result:     .asciiz      "Final result is: "
    # print the result
    li $v0,1
    la $a0, ($t2)
+   syscall
+
+    # display the newline
+    li $v0, 4
+    la $a0, newline
+    syscall
+
+   # print the result
+   li $v0,1
+   la $a0, ($t3)
    syscall
 
    li $v0, 10
