@@ -1,5 +1,5 @@
 .data
-	first: .word 20
+	first: .word 10
 	second: .word 20
 	lesser:   .asciiz	"first number is lesser than second\n"
 .text

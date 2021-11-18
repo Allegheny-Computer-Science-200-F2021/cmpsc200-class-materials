@@ -27,7 +27,7 @@
   topReverseLoop:			# top of the second loop
    	# LOAD THE CHARACTER AT POSITION $T0 BACK INTO $T2
 	lb $t2, ($t0)
-   	li $v0, 11
+   	li $v0, 1
    	lb $a0, ($t0)
    	syscall # PRINT THE CHARACTER IN $T2 USING THE APPROPRIATE SYSCALL
 

@@ -58,11 +58,9 @@ jal fib     #fib(n-1)
 add $t1,$t1,1
 
 lw $ra,0($sp)   #restoring return address from stack
-add $sp,$sp,4
-
-
-sub $sp,$sp,4   #Push return value to stack
 sw $v0,0($sp)
+
+
 #Calling fib(n-2)
 sub $sp,$sp,4   #storing return address on stack
 sw $ra,0($sp)
