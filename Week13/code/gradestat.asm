@@ -3,6 +3,8 @@
 	newline:  			.asciiz "\n"
   	promptScore:   	    .asciiz "Enter the student scores:\n"
 	promptNum:			.asciiz "Enter the number of students:\n"
+	promptTotal:			.asciiz "The Total grade is: "
+	
 	promptAvg:			.asciiz "The Average grade is: "
 	promptMin:          .asciiz "The Mininum grade is: "
 	promptMax:			.asciiz "The Maximum grade is: "
@@ -84,6 +86,19 @@
 
 		li $v0, 1
 		move $a0, $t9
+		syscall
+
+
+		la $a0, newline
+		li $v0, 4
+		syscall
+
+		la $a0, promptTotal
+		li $v0, 4
+		syscall
+
+		li $v0, 1
+		move $a0, $t5
 		syscall
 
 
